@@ -1,0 +1,14 @@
+---------------------
+2.2 => 3.0 Changes
+---------------------
+
+This version saw the layout change to a bootstrap layout, which is not compatible with any previous versions.
+
+The attachments have moved to a new location, these are as follows:
+
+templates/attachments      >  content/attachments
+templates/attachments/faq  >  content/attachments-faq
+
+You should move the data from the old location to the new.
+
+Sorry for the inconvenience with this release.

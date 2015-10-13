@@ -1,0 +1,751 @@
+---------------------
+2.1 => 2.2 Changes
+---------------------
+
+For 2.2, all admin files should be replaced (unless stated otherwise) as many are now NOT encoded.
+
+============================================================================================================
+
+1. From the latest zip file, add the following to your installation:
+
+   admin/control/user-defined/defined2.inc.php
+   control/user-defined/defined3.inc.php
+   templates/html/bbcode-buttons.htm
+   templates/html/faq-attachments-link.htm
+   templates/html/faq-attachments.htm
+   templates/html/faq-search-subcat.htm
+   templates/html/faq-subcat-link.htm
+   templates/html/faq-subcats.htm
+   templates/html/custom-fields/wrapper.htm
+   templates/images/types/*
+   templates/images/bb-example.png
+   templates/images/disabled.gif
+   templates/images/timezone.png
+   templates/images/vimeo-info.gif
+   templates/images/yt-info.gif
+   templates/js/overlib.js
+   templates/language/english/lang3.php
+   templates/language/english/admin-email/ticket-assign.txt
+   templates/language/english/email/auto-close-tickets.txt
+
+============================================================================================================
+
+2. Create the following directory and give it read/write permissions (chmod 0777):
+
+   templates/attachments/faq/
+
+============================================================================================================
+
+3. Open 'stylesheet.css' and add the following at the bottom of the file:
+
+   .setts {
+    float:right;
+    font-size:11px;
+    font-weight:normal;
+    text-transform:none;
+    background:url(templates/images/timezone.png) no-repeat left center;
+    padding:2px 0 2px 20px;
+  }
+
+  .timezones {
+    display:none;
+    background:#f6f6f6;
+    border-bottom:1px dashed #d7d7d7;
+  }
+  
+  #categories h2.sub {
+    background:#f6f6f6;
+    padding:10px;
+    font-size:14px;
+    color:#696969;
+    text-transform:uppercase;
+    border-top: 2px dashed #EAEAEA;
+    border-bottom: 2px dashed #EAEAEA;
+    -webkit-border-radius: 5px 5px 0 0;
+    -khtml-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  #categories .faqSubWrapper {
+    height:100%;
+    padding:10px;
+  }
+
+  .faqSubWrapper ul.cats {
+    list-style:none;
+    width:100%;
+    list-style-type: none;
+    padding:5px;
+  }
+
+  .faqSubWrapper .cats li {
+    width:33%;
+    float:left;
+    margin-bottom:10px;
+  }
+
+  .faqSubWrapper .cats li a {
+    color:#5d781d;
+    background:url(templates/images/folder.png) no-repeat left center;
+    padding-left:20px;
+  }
+
+  .faqSubWrapper .cats li a:hover {
+    text-decoration:none;
+  }
+
+  .faqSubWrapper .cats li .summary {
+    display:block;
+    margin-top:3px;
+    font-size:11px;
+  }
+  
+  .pagination {
+    margin:5px 0 20px 0;
+    font-size:11px;
+  }
+
+  .pagination p {
+    padding:10px;
+    text-align:center;
+    background:#fff;
+    border:1px solid #d7d7d7;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    -khtml-border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -ms-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+  }
+
+  .pagination a {
+    margin:0 5px 0 5px;
+  }
+
+  .pagination .current {
+    margin:0 5px 0 5px;
+  }
+
+  .pagination .first {
+  }
+
+  .pagination .prev {
+  }
+
+  .pagination .next {
+  }
+
+  .pagination .last {
+  }
+
+  .pagination .disabled_first {
+    margin:0 5px 0 5px;
+  }
+
+  .pagination .disabled_prev {
+    margin:0 5px 0 5px;
+  }
+
+  .pagination .disabled_next {
+    margin:0 5px 0 5px;
+  }
+
+  .pagination .disabled_last {
+    margin:0 5px 0 5px;
+  }
+  
+  
+  .faqAttachments {
+    border-top:1px dashed #d7d7d7;
+    margin:10px 0 10px 0;
+    padding:10px 0 10px 0;
+    line-height:25px;
+  }
+
+  .faqAttachments .link {
+    display:block;
+  }
+
+  .faqAttachments .link .size {
+    font-size:11px;
+    color:#415b62;
+  }
+
+  .faqAttachments a {
+    padding-left:25px;
+  }
+
+  .faqAttachments a.aac { background:url(templates/images/types/aac.png) no-repeat left center; }
+  .faqAttachments a.ai { background:url(templates/images/types/ai.png) no-repeat left center; }
+  .faqAttachments a.aiff { background:url(templates/images/types/aiff.png) no-repeat left center; }
+  .faqAttachments a.avi { background:url(templates/images/types/avi.png) no-repeat left center; }
+  .faqAttachments a.blank { background:url(templates/images/types/blank.png) no-repeat left center; }
+  .faqAttachments a.bmp { background:url(templates/images/types/bmp.png) no-repeat left center; }
+  .faqAttachments a.cpp { background:url(templates/images/types/cpp.png) no-repeat left center; }
+  .faqAttachments a.css { background:url(templates/images/types/css.png) no-repeat left center; }
+  .faqAttachments a.dat { background:url(templates/images/types/dat.png) no-repeat left center; }
+  .faqAttachments a.dmg { background:url(templates/images/types/dmg.png) no-repeat left center; }
+  .faqAttachments a.doc { background:url(templates/images/types/doc.png) no-repeat left center; }
+  .faqAttachments a.dotx { background:url(templates/images/types/dotx.png) no-repeat left center; }
+  .faqAttachments a.dwg { background:url(templates/images/types/dwg.png) no-repeat left center; }
+  .faqAttachments a.dxf { background:url(templates/images/types/dxf.png) no-repeat left center; }
+  .faqAttachments a.eps { background:url(templates/images/types/eps.png) no-repeat left center; }
+  .faqAttachments a.exe { background:url(templates/images/types/exe.png) no-repeat left center; }
+  .faqAttachments a.flv { background:url(templates/images/types/flv.png) no-repeat left center; }
+  .faqAttachments a.gif { background:url(templates/images/types/gif.png) no-repeat left center; }
+  .faqAttachments a.html { background:url(templates/images/types/html.png) no-repeat left center; }
+  .faqAttachments a.ics { background:url(templates/images/types/ics.png) no-repeat left center; }
+  .faqAttachments a.iso { background:url(templates/images/types/iso.png) no-repeat left center; }
+  .faqAttachments a.java { background:url(templates/images/types/java.png) no-repeat left center; }
+  .faqAttachments a.jpg { background:url(templates/images/types/jpg.png) no-repeat left center; }
+  .faqAttachments a.key { background:url(templates/images/types/key.png) no-repeat left center; }
+  .faqAttachments a.mid { background:url(templates/images/types/mid.png) no-repeat left center; }
+  .faqAttachments a.mp3 { background:url(templates/images/types/mp3.png) no-repeat left center; }
+  .faqAttachments a.mp4 { background:url(templates/images/types/mp4.png) no-repeat left center; }
+  .faqAttachments a.mpg { background:url(templates/images/types/mpg.png) no-repeat left center; }
+  .faqAttachments a.odf { background:url(templates/images/types/odf.png) no-repeat left center; }
+  .faqAttachments a.ods { background:url(templates/images/types/ods.png) no-repeat left center; }
+  .faqAttachments a.odt { background:url(templates/images/types/odt.png) no-repeat left center; }
+  .faqAttachments a.otp { background:url(templates/images/types/otp.png) no-repeat left center; }
+  .faqAttachments a.ots { background:url(templates/images/types/ots.png) no-repeat left center; }
+  .faqAttachments a.ott { background:url(templates/images/types/ott.png) no-repeat left center; }
+  .faqAttachments a.page { background:url(templates/images/types/page.png) no-repeat left center; }
+  .faqAttachments a.pdf { background:url(templates/images/types/pdf.png) no-repeat left center; }
+  .faqAttachments a.php { background:url(templates/images/types/php.png) no-repeat left center; }
+  .faqAttachments a.png { background:url(templates/images/types/png.png) no-repeat left center; }
+  .faqAttachments a.ppt { background:url(templates/images/types/ppt.png) no-repeat left center; }
+  .faqAttachments a.psd { background:url(templates/images/types/psd.png) no-repeat left center; }
+  .faqAttachments a.py { background:url(templates/images/types/py.png) no-repeat left center; }
+  .faqAttachments a.rar { background:url(templates/images/types/rar.png) no-repeat left center; }
+  .faqAttachments a.rtf { background:url(templates/images/types/rtf.png) no-repeat left center; }
+  .faqAttachments a.sql { background:url(templates/images/types/sql.png) no-repeat left center; }
+  .faqAttachments a.tgz { background:url(templates/images/types/tgz.png) no-repeat left center; }
+  .faqAttachments a.tiff { background:url(templates/images/types/tiff.png) no-repeat left center; }
+  .faqAttachments a.txt { background:url(templates/images/types/txt.png) no-repeat left center; }
+  .faqAttachments a.wav { background:url(templates/images/types/wav.png) no-repeat left center; }
+  .faqAttachments a.xls { background:url(templates/images/types/xls.png) no-repeat left center; }
+  .faqAttachments a.xlsx { background:url(templates/images/types/xlsx.png) no-repeat left center; }
+  .faqAttachments a.xml { background:url(templates/images/types/xml.png) no-repeat left center; }
+  .faqAttachments a.zip { background:url(templates/images/types/zip.png) no-repeat left center; }
+
+  #msgWrapArea {
+    width:800px;
+    background:#fff;
+    border:5px solid #e8e8e8;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    -khtml-border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -ms-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    margin:0 auto;
+    margin-top:50px;
+  }
+
+  #msgWrapArea .text {
+    text-align:center;
+    font-size:20px;
+    padding:10px;
+    margin-top:20px;
+  }
+
+  #msgWrapArea .spinner {
+    text-align:center;
+    padding:10px;
+    margin:10px 0 10px 0;
+  }
+
+  #msgWrapArea .text2 {
+    text-align:center;
+    font-size:14px;
+    padding:10px;
+  }
+
+  #msgWrapArea .msg {
+    text-align:center;
+    font-size:12px;
+    padding:10px;
+    margin:10px 0 20px 0;
+  }
+
+============================================================================================================
+
+4. Open 'templates/bb-code-help.tpl.php'
+
+   FIND:
+   
+   <link rel="stylesheet" href="stylesheet.css" type="text/css" />
+   
+   AFTER, ADD:
+   
+   <link href="bbcode.css" rel="stylesheet" type="text/css" />
+   <script type="text/javascript" src="templates/js/overlib.js"><!-- overLIB (c) Erik Bosrup --></script>
+   
+   FIND:
+   
+   <body class="body">
+   
+   AFTER, ADD:
+   
+   <div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000;"></div>
+   
+   FIND ON LINE 347:
+   
+   </div>
+   
+   AFTER, ADD:
+   
+   <h1 style="margin:5px 0 0 0">
+    <?php echo $this->TEXT[27]; ?>:
+   </h1>
+    <span class="clearfix"></span>
+
+
+
+   <div class="bbWrapper">
+
+    <div class="leftBB">
+      <p><b>[youtube]</b><?php echo $this->TEXT[29]; ?><b>[/youtube]</b> [<a href="javascript:void(0);" onmouseover="return overlib('<img src=/'templates/images/yt-info.gif/' alt=/'/' title=/'/' />','',RIGHT,ol_offsety = 5, ol_offsetx = 25);" onmouseout="nd();">?</a>]</p>
+    </div>
+  
+    <div class="middleBB">
+      <p>&nbsp;</p>
+    </div>
+  
+    <div class="rightBB">
+      <p><?php echo $this->TEXT[28]; ?></p>
+    </div>
+  
+    <br class="clear" />
+
+  </div>
+
+  <div class="bbWrapper">
+
+   <div class="leftBB">
+     <p><b>[vimeo]</b><?php echo $this->TEXT[29]; ?><b>[/vimeo]</b> [<a href="javascript:void(0);" onmouseover="return overlib('<img src=/'templates/images/vimeo-info.gif/' alt=/'/' title=/'/' />','',RIGHT,ol_offsety = 5, ol_offsetx = 25);" onmouseout="nd();">?</a>]</p>
+   </div>
+  
+   <div class="middleBB">
+     <p>&nbsp;</p>
+   </div>
+  
+   <div class="rightBB">
+     <p><?php echo $this->TEXT[28]; ?></p>
+   </div>
+  
+   <br class="clear" />
+
+  </div>
+
+============================================================================================================
+
+5. Open 'templates/create-ticket.tpl.php'
+
+   FIND:
+   
+   if (typeof name!=undefined && $('#name').val()=='') {
+     $('#name').focus();
+   } else {
+     if (typeof subject!=undefined) {
+       $('#subject').focus();
+     }
+   }
+   
+   AFTER, ADD:
+   
+   <?php
+   // If form had errors, reload custom fields and populate data entered..
+   if (isset($_POST['process']) && (int)$_POST['dept']>0) {
+   ?>
+   deptLoader('<?php echo $_POST['dept']; ?>','yes');
+   <?php
+   }
+   ?>
+   
+   FIND:
+   
+   <label>*
+   <?php 
+   // BB CODE
+   // templates/html/bbcode-link.htm
+   echo $this->BBCODE;
+   echo $this->TEXT[6]; 
+   ?>
+   </label>
+   <p><textarea rows="12" cols="40" name="comments" id="comments" tabindex="5" onkeyup="$('#e_comments').hide('slow')"><?php echo $this->VALUE[3]; ?></textarea>
+   <?php echo (in_array('comments',$this->E_ARRAY) ? '<span class="error" id="e_comments">'.$this->ERRORS[3].'</span>' : ''); ?>
+   </p>
+   
+   CHANGE TO:
+   
+   <label>*
+   <?php 
+   echo $this->TEXT[6]; 
+   ?>
+   </label>
+   <p>
+   <?php
+   // BB CODE
+   // templates/html/bbcode-buttons.htm
+   echo $this->BBCODE;
+   ?>
+   <textarea rows="12" cols="40" name="comments" id="comments" tabindex="5" onkeyup="jQuery('#e_comments').hide('slow')"><?php echo $this->VALUE[3]; ?></textarea>
+   <?php echo (in_array('comments',$this->E_ARRAY) ? '<span class="error" id="e_comments">'.$this->ERRORS[3].'</span>' : ''); ?>
+   </p>
+
+============================================================================================================
+
+6. Open 'templates/faq.tpl.php'
+
+   FIND:
+   
+   <div class="faqWrapper">
+    
+     <ul class="cats">
+     <?php
+     // F.A.Q CATEGORIES
+     // templates/html/faq-cat-link
+     echo $this->CATEGORIES; 
+     ?>
+     </ul>
+    
+     <br class="clear" />
+   </div>
+   
+   AFTER, ADD:
+   
+   <?php
+   // SUB CATEGORIES
+   // templates/html/faq-subcats.htm
+   // templates/html/faq-subcat-link.htm
+   echo $this->SUB_CATEGORIES;
+   ?>
+   
+   FIND:
+   
+   <p class="answer"><?php echo $this->ANSWER; ?></p>
+   
+   AFTER, ADD:
+   
+   <?php
+   // QUESTION ATTACHMENTS
+   // templates/html/faq-attachments.htm
+   // templates/html/faq-attachments-link.htm
+   echo $this->ATTACHMENTS;
+   ?>
+   
+   FIND:
+   
+   if ($this->PAGES) {
+   ?>
+   <div id="pageNumbers">
+    <p><?php echo $this->PAGES; ?></p>
+   </div>
+   <?php
+   }
+   
+   CHANGE TO:
+   
+   if ($this->PAGES) {
+     echo $this->PAGES;
+   }
+
+============================================================================================================
+
+7. Open 'templates/header.tpl.php':
+
+   FIND:
+   
+   <link href="stylesheet.css" rel="stylesheet" type="text/css" />
+   
+   AFTER, ADD:
+   
+   <link href="bbcode.css" rel="stylesheet" type="text/css" />
+
+   FIND:
+   
+   ms_SpecialChars
+   
+   CHANGE TO:
+   
+   mswSpecialChars
+
+============================================================================================================
+
+8. Open 'templates/portal-disputes.tpl.php'
+
+   FIND:
+   
+   if ($this->PAGES) {
+   ?>
+   <div id="pageNumbers">
+    <p><?php echo $this->PAGES; ?></p>
+   </div>
+   <?php
+   }
+   
+   CHANGE TO:
+   
+   if ($this->PAGES) {
+     echo $this->PAGES;
+   }
+
+============================================================================================================
+
+9. Open 'templates/portal-main.tpl.php'
+
+   FIND:
+   
+   <h2<?php echo $this->CREATED_CLASS; ?>><?php echo $this->MESSAGE[1]; ?></h2>
+      
+   <p><?php echo $this->TEXT[2]; ?></p>
+   
+   CHANGE TO:
+   
+   <h2><span class="setts"><a href="#" onclick="jQuery('.timezones').slideDown('slow');return false" title="<?php echo $this->TEXT[13]; ?>"><?php echo $this->TEXT[13]; ?></a></span><?php echo $this->MESSAGE[1]; ?></h2>
+      
+   <p class="timezones">
+   <?php echo $this->TEXT[14]; ?>: <select name="timezone" onchange="ms_SetTimezone(this.value)">
+   <option value="0">- - - - - - -</option>
+   <?php
+   // TIMEZONES..
+   foreach ($this->TIMEZONES AS $k => $v) {
+   ?>
+   <option value="<?php echo $k; ?>"<?php echo ($this->CURRENT_TS==$k ? ' selected="selected"' : ''); ?>><?php echo $v; ?></option>
+   <?php
+   }
+   ?>
+   </select> [<a href="#" onclick="jQuery('.timezones').slideUp('slow');return false">X</a>]
+   </p>  
+      
+   <p><?php echo $this->TEXT[2]; ?></p>
+   
+   FIND:
+   
+   if ($this->PAGES) {
+   ?>
+   <div id="pageNumbers">
+    <p><?php echo $this->PAGES; ?></p>
+   </div>
+   <?php
+   }
+   
+   CHANGE TO:
+   
+   if ($this->PAGES) {
+     echo $this->PAGES;
+   }
+
+============================================================================================================
+
+10. Open 'templates/portal-search.tpl.php'
+
+    FIND:
+    
+    ms_SpecialChars
+    
+    CHANGE TO:
+    
+    mswSpecialChars
+    
+    FIND:
+    
+    if ($this->PAGES) {
+    ?>
+    <div id="pageNumbers">
+     <p><?php echo $this->PAGES; ?></p>
+    </div>
+    <?php
+    }
+    
+    CHANGE TO:
+    
+    if ($this->PAGES) {
+      echo $this->PAGES;s
+    }
+
+============================================================================================================
+
+11. Open 'templates/portal-tickets.tpl.php'
+
+    FIND:
+    
+    if ($this->PAGES) {
+    ?>
+    <div id="pageNumbers">
+     <p><?php echo $this->PAGES; ?></p>
+    </div>
+    <?php
+    }
+    
+    CHANGE TO:
+    
+    if ($this->PAGES) {
+      echo $this->PAGES;s
+    }
+
+============================================================================================================
+
+12. Open 'templates/portal-view-dispute.tpl.php'
+
+    FIND:
+    
+    <p class="data"><?php echo $this->TEXT_DATA[6]; ?></p>
+    
+    AFTER, ADD:
+    
+    <?php
+    // STAFF ASSIGNED
+    if ($this->STAFF_ASSIGN) {
+    ?>
+    <label><?php echo $this->TEXT[16]; ?></label>
+    <p class="data"><?php echo $this->STAFF_ASSIGN; ?></p>
+    <?php
+    }
+    ?>
+    
+    FIND:
+    
+    <h2>
+    <?php 
+    // BB CODE
+    // templates/html/bbcode-link.htm
+    echo $this->BBCODE;
+    echo $this->MESSAGE[2]; 
+    ?>
+    </h2>
+    
+    CHANGE TO:
+    
+    <h2>
+    <?php 
+    echo $this->MESSAGE[2]; 
+    ?>
+    </h2>
+    
+    FIND:
+    
+    <p>
+     <textarea name="comments" tabindex="1" rows="15" id="comments" cols="40" onkeyup="$('#e_comments').hide('slow')"><?php echo $this->COMMENTS; ?></textarea>
+     <?php echo (in_array('comments',$this->E_ARRAY) ? '<span class="error" id="e_comments">'.$this->ERRORS[0].'</span>' : ''); ?>
+    </p>
+    
+    CHANGE TO:
+    
+    <p>
+     <?php
+     // BB CODE
+     // templates/html/bbcode-buttons.htm
+     echo $this->BBCODE;
+     ?>
+     <textarea name="comments" tabindex="1" rows="15" id="comments" cols="40" onkeyup="jQuery('#e_comments').hide('slow')"><?php echo $this->COMMENTS; ?></textarea>
+     <?php echo (in_array('comments',$this->E_ARRAY) ? '<span class="error" id="e_comments">'.$this->ERRORS[0].'</span>' : ''); ?>
+    </p>
+
+============================================================================================================
+
+13. Open 'templates/portal-view-ticket.tpl.php'
+
+    FIND:
+    
+    <p class="data"><?php echo $this->TEXT_DATA[6]; ?></p>
+    
+    AFTER, ADD:
+    
+    <?php
+    // STAFF ASSIGNED
+    if ($this->STAFF_ASSIGN) {
+    ?>
+    <label><?php echo $this->TEXT[14]; ?></label>
+    <p class="data"><?php echo $this->STAFF_ASSIGN; ?></p>
+    <?php
+    }
+    ?>
+    
+    FIND:
+    
+    <h2>
+    <?php 
+    // BB CODE
+    // templates/html/bbcode-link.htm
+    echo $this->BBCODE;
+    echo $this->MESSAGE[2]; 
+    ?>
+    </h2>
+    
+    CHANGE TO:
+    
+    <h2>
+    <?php 
+    echo $this->MESSAGE[2]; 
+    ?>
+    </h2>
+    
+    FIND:
+    
+    <p>
+     <textarea name="comments" tabindex="1" rows="15" id="comments" cols="40" onkeyup="$('#e_comments').hide('slow')"><?php echo $this->COMMENTS; ?></textarea>
+     <?php echo (in_array('comments',$this->E_ARRAY) ? '<span class="error" id="e_comments">'.$this->ERRORS[0].'</span>' : ''); ?>
+    </p>
+    
+    CHANGE TO:
+    
+    <p>
+     <?php
+     // BB CODE
+     // templates/html/bbcode-buttons.htm
+     echo $this->BBCODE;
+     ?>
+     <textarea name="comments" tabindex="1" rows="15" id="comments" cols="40" onkeyup="jQuery('#e_comments').hide('slow')"><?php echo $this->COMMENTS; ?></textarea>
+     <?php echo (in_array('comments',$this->E_ARRAY) ? '<span class="error" id="e_comments">'.$this->ERRORS[0].'</span>' : ''); ?>
+    </p>
+
+============================================================================================================
+
+14. Open 'templates/html/attachments-links.htm'
+
+    FIND:
+    
+    <span class="max">({text}: {max})</span>
+    
+    CHANGE TO:
+    
+    <span class="max">({text}: <span id="acount">1</span>/{max})</span>
+
+============================================================================================================
+
+15. Open 'templates/html/faq-article-link.htm'
+
+    FIND:
+    
+    <a href="?a={article}" title="{question}">{question}</a>
+    
+    CHANGE TO:
+    
+    <a href="?a={article}{sublink}" title="{question}">{question}</a>
+
+============================================================================================================
+
+16. Open 'templates/language/english/email/email-digest.txt'
+
+    FIND:
+    
+    There are currently {COUNT} open tickets and {COUNT_DIS} open disputes:
+    
+    CHANGE TO:
+    
+    - {COUNT} open ticket(s)
+    - {COUNT_DIS} open dispute(s)
+    - {COUNT_ASG} ticket(s) awaiting assignment
+
+    ---------------------------------------------------
+    Tickets awaiting user/staff assignment:
+    ---------------------------------------------------
+
+    {ASSIGN}
+
+============================================================================================================
+
+17. Refer to the next change to continue if applicable.
+
+============================================================================================================

@@ -1,0 +1,544 @@
+.toolTip {
+  font-size:11px;
+  color:#415b62;
+}
+.toolTip .users {
+  background:#fff;
+  font-size:10px;
+}
+.toolTip .users p {
+  padding:5px;
+  font-weight:bold;
+}
+.versionSpinner {
+  padding-top:20px;
+}
+.versionSpinner .inner {
+  text-align:center;
+  padding-top:30px;
+}
+.versionSpinner .inner span {
+  display:block;
+  font-size:12px;
+  margin-top:20px;
+}
+.toolTip .users p.none {
+  padding:5px;
+  font-weight:normal;
+  color:#415b62;
+}
+.toolTip .users p .email {
+  margin-left:5px;
+  font-weight:normal;
+}
+.toolTip .users p .in {
+  display:block;
+  font-style:italic;
+  margin-top:10px;
+  font-weight:normal;
+}
+.toolTipBorder {
+  border:1px solid #b2b1b1;
+  background:#fff;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  -khtml-border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+   border-radius: 5px 5px 5px 5px;
+}
+.toolTipBorder table {
+  border:0;
+  background:#eaeaea;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  -khtml-border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+   border-radius: 5px 5px 5px 5px;
+}
+.nothing_to_see {
+  text-align:center;
+  font-size:12px;
+  padding:10px;
+  font-style:italic;
+}
+.nodata {
+  text-align:center;
+  font-size:12px;
+  font-style:italic;
+  margin:0;
+  padding:0;
+}
+.boldArea {
+  font-weight:bold;
+}
+.alignmentRight {
+  text-align:right;
+}
+.alignmentLeft {
+  text-align:left;
+}
+.edit_link {
+  color:#000;
+}
+.eLink {
+  color:red;
+  font-style:italic;
+}
+.uppercase {
+  text-transform:uppercase;
+}
+.quickText {
+  font-size:11px;
+  font-style:italic;
+}
+.smalltxt {
+  font-size:11px;
+}
+
+/* TD Info Bar */
+.tdCellInfo {
+  display:block;
+  font-size:11px;
+  font-style:italic;
+  margin-top:10px;
+  color:#66748f;
+}
+.tdCellInfo .highlight {
+}
+.tdCellInfoDispute {
+  display:block;
+  font-size:11px;
+  font-style:italic;
+  margin-top:10px;
+  color:#66748f;
+}
+.tdCellInfoDispute .highlight {
+  color:#66748f;
+}
+.highlighter {
+  color:#66748f;
+}
+.highlightPass {
+  color:#66748f;
+}
+.ticketDate {
+  display:block;
+  margin-top:10px;
+  font-size:12px;
+  color:#66748f;
+}
+.ticketPriority {
+  display:block;
+  margin-top:10px;
+  font-size:12px;
+}
+
+/* Home tickets */
+.homeTicketWrapper {
+  border-bottom:1px dashed #ddd;
+  padding:10px 0 10px 0;
+}
+.homeTicketWrapper:hover {
+  background:#f9f9f9;
+}
+.homeTicketSubject {
+}
+.homeTicketWrapper .bar {
+  display:block;
+  font-size:11px;
+}
+.nobottomborder {
+  border-bottom:0;
+}
+
+/* Textarea sizing */
+.well textarea {
+  width: 60%;
+}
+textarea.siggie {
+  width: 60%;
+}
+textarea[name="answer"] {
+  width: 60%;
+}
+textarea[name="comments"] {
+  width: 98%;
+  height:400px;
+}
+textarea[name="notes"] {
+  width:70%;
+  height:200px;
+}
+.addCommsWrapper textarea[name="comments"] {
+  width:65%;
+}
+textarea[name="add-to"] {
+  width: 98%;
+  height:150px;
+}
+
+/* Options link spacing */
+.ms-options-links a {
+  margin-right:3px;
+}
+
+/* Warning link */
+a.aWarning {
+  color:#ff0000;
+}
+
+/* Div spacer */
+.divSpacer {
+  border-top:1px dashed #ddd;
+  padding-top:20px;
+}
+
+/* Assigned Users */
+.assignToTD {
+  max-height:150px;
+  overflow:auto;
+}
+
+/* Tickets */
+.ticketInfoBox {
+  margin-top:20px;
+  border-top:1px dashed #ddd;
+}
+.ticketInfoBox p {
+  font-size:11px;
+  padding-top:10px;
+  font-style:italic;
+  text-align:right;
+}
+.customFields .textHead {
+  margin-bottom:10px;
+}
+.customFields .dataArea {
+  padding-left:0;
+  margin-bottom:10px;
+}
+.customFields .input-xlarge {
+  width:50%;
+}
+.customFields textarea {
+  width: 50%;
+}
+.attachlinks {
+  margin:10px 0 10px 0;
+}
+.standardResponse {
+  border-top:1px dashed #ddd;
+  margin:10px 0 10px 0;
+  padding-top:10px;
+  clear:both;
+  height:35px;
+  width:98%;
+}
+.standardResponse select {
+  margin:0;
+}
+.toggleFields {
+  cursor:pointer;
+  padding:0;
+  margin:5px 10px 0 0;
+  border:0 !important;
+  background:transparent !important;
+  outline:none;
+  line-height:25px;
+}
+.ticketOptionsArea {
+  margin-top:100px;
+  border-top:1px dashed #ddd;
+  padding-top:10px;
+}
+#mergeBoxArea {
+  padding-bottom:10px;
+}
+#mergeBoxArea .input-small {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+.mergehover:hover {
+  background:#f9f9f9;
+}
+#ticketPadArea {
+  display:none;
+}
+#ticketPad {
+  height:260px;
+}
+#ticketPad textarea {
+  width:98%;
+}
+#userAssignArea {
+  display:none;
+}
+#userAssignArea .email {
+  color:#4e5c77;
+}
+.userSignature {
+  margin-top:20px;
+  border-top:1px dashed #ddd;
+  padding:10px 0 0 0;
+  font-size:11px;
+  font-style:italic;
+}
+.replyArea {
+  border-top:1px dashed #ddd;
+  padding-top:20px;
+}
+.respDeptArea {
+  display:none;
+  height:200px;
+  overflow:auto;
+}
+.ticketSubject {
+  padding-bottom:10px;
+  margin-bottom:10px;
+  border-bottom:1px dashed #ddd;
+  font-size:13px;
+  font-weight:bold;
+}
+.historyEntry {
+  display:block;
+  line-height:25px;
+  font-size:11px;
+}
+.tIcons {
+  float:right;
+  display:none;
+}
+
+/* Notes Window */
+.notesPopup {
+  text-align:center;
+  margin:10px 0 10px 0;
+}
+
+.notesPopup textarea[name="notes"] {
+  width:95%;
+  height:200px;
+}
+
+/* Ticket Area Colouring */
+.mainticket {
+}
+.mainticket .block-heading {
+}
+.mainticket .block-heading .label {
+  background:#f3f3f3;
+  color:#555;
+  text-shadow:none;
+  box-shadow:none;
+}
+.reptypeadmin {
+}
+.reptypeadmin .block-heading {
+}
+.reptypeadmin .block-heading .label {
+  background:#f3f3f3;
+  color:#555;
+  text-shadow:none;
+  box-shadow:none;
+}
+.reptypevisitor {
+}
+.reptypevisitor .block-heading {
+}
+.reptypevisitor .block-heading .label {
+  background:#f3f3f3;
+  color:#555;
+  text-shadow:none;
+  box-shadow:none;
+}
+
+/* FAQ */
+.windowVoteArea {
+  border-top:1px dashed #ddd;
+}
+.windowVoteArea p {
+  text-align:center;
+  color:#66748f;
+  padding-top:10px;
+}
+.unassigned {
+  color:red;
+}
+
+/* Preview Areas */
+#previewArea {
+  display:none;
+}
+.previewArea {
+  overflow:auto;
+  margin-bottom:10px;
+  width:97.3%;
+  padding:10px;
+  border:1px solid #ddd;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background:url(../images/preview.png) no-repeat 95% 10%;
+}
+.prevTickets {
+  height:347px;
+}
+.prevSR {
+  height:210px;
+}
+.prevFAQ {
+  height:190px;
+}
+.addCommsWrapper {
+  margin-top:10px;
+}
+
+/* Attachments */
+.attachmentTRBG {
+  background:#fcf8e3;
+}
+.attachBox {
+  display:block;
+  margin-bottom:5px;
+}
+
+/* Custom Fields */
+.customFields {
+  margin-bottom:10px;
+}
+.cusTickFields {
+  border-top:1px dashed #ddd;
+  margin-top:20px;
+  padding:15px 0 0 0;
+}
+.cusTickFields .head {
+  font-size:13px;
+  color:#4e5c77;
+}
+.cusTickFields .text {
+  font-size:13px;
+}
+
+/* Stat area overrides */
+.stat {
+}
+.stat a:hover {
+  text-decoration:underline;
+}
+
+/* Enable / disable */
+.enableDisable {
+  padding-right:5px;
+  cursor:pointer;
+  color:#4e5c77;
+}
+
+#errMsg {
+  padding-left:10px;
+  color:#ff7878;
+  font-size:12px;
+  font-style:italic;
+}
+
+/* Graphs */
+.chartWrapper {
+}
+
+/* Drop Downs */
+.dropdown-menu {
+  max-height:200px;
+  overflow:auto;
+}
+.dropdown-menu a {
+  font-size:12px;
+}
+.topbar-dropdowns a {
+  font-size:12px;
+}
+.page-dropdowns a {
+  font-size:12px;
+}
+.page-dropdowns span {
+  font-size:12px;
+  cursor:pointer;
+}
+.page-dropdowns span:hover {
+  color:#464f60;
+}
+
+/*Buttons*/
+.search-bar-button {
+  margin-left:7px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* Mailbox */
+a.mailBoxMsg {
+  background:#f6f6f6 !important;
+  border-bottom:1px solid #ddd !important;
+}
+.mailBoxSubject a.unread {
+  font-weight:bold;
+}
+.mailBoxMsgBar {
+  text-align:right;
+  font-size:11px;
+  font-style:italic;
+  margin-top:10px;
+  color:#66748f;
+}
+.mailBoxReplyOdd {
+  background: #fafafa;
+}
+.mailBoxReplyEven {
+}
+.mailStaff {
+  max-height:100px;
+  overflow:auto;
+  width:55%;
+  border:1px dashed #ddd;
+  padding:10px;
+}
+.mailStaff_Err {
+  max-height:100px;
+  overflow:auto;
+  width:55%;
+  background:#f9f9f9;
+  border:1px dashed #ff9999;
+  padding:10px;
+}
+
+/* Select Adjustments */
+.noleft-borders {
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important;
+}
+.noright-borders {
+  -webkit-border-radius: 5px 0 0 5px !important;
+  -moz-border-radius: 5px 0 0 5px !important;
+  border-radius: 5px 0 0 5px !important;
+}
+
+/* Header adjustments */
+.header .page-title {
+  margin:0;
+}
+
+/* Label adjustments */
+.label {
+  font-weight:normal;
+}
+
+/* Overlay spinner */
+.overlaySpinner {
+  position:absolute;
+  z-index: 9999;
+  top:0;
+  left:0;
+  background: #eee url(../images/action-spinner.gif) center 10% no-repeat !important;
+  height:100% !important;
+  width:100% !important;
+  opacity: .5;
+}

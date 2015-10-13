@@ -1,0 +1,22 @@
+Account Active
+
+<-{separater}->
+
+Hi {NAME},
+
+Your support account at {WEBSITE_NAME} is now active.
+
+Account Email: {EMAIL}
+Account Pass: {PASS}
+{LOGIN_URL}/?p=login
+
+We highly recommend you change your password as soon as possible to something you can remember.
+
+To update your password, click the 'Account Profile' link when you are logged in.
+
+Kind regards,
+
+<-{separater}->
+
+{WEBSITE_NAME} Support Team
+{WEBSITE_URL}

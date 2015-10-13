@@ -1,0 +1,142 @@
+---------------------
+2.0 => 2.1 Changes
+---------------------
+
+NOTE: v2.0 to v2.1 sees significant layout changes and as such, overwriting files and re-editing is recommended.
+
+============================================================================================================
+
+1. From your backup set, copy the 'lang/english.php' file contents to 'templates/language/english/'.
+
+   Once copied, rename to 'lang1.php'
+
+============================================================================================================
+
+2. From your backup set, copy the 'admin/templates/email/' folder contents to 'templates/language/english/admin-email/'.
+
+   Overwrite any files if prompted (to replace your original backup files).
+   
+============================================================================================================
+
+3. From your backup set, copy the 'templates/email/' folder contents to 'templates/language/english/email/'.
+
+   Overwrite any files if prompted (to replace your original backup files).   
+
+============================================================================================================
+
+4. From your backup set, copy the 'control/defined.inc.php' file to 'control/user-defined/'
+
+   Overwrite new file if prompted (to replace your original backup file).
+
+============================================================================================================
+
+5. From your backup set, copy the 'admin/control/defined.inc.php' file to 'admin/control/user-defined/'
+
+   Overwrite new file if prompted (to replace your original backup file).
+   
+============================================================================================================
+
+6. From the latest download set, add the following files to your installation:
+
+   admin/control/user-defined/defined2.inc.php
+   control/user-defined/defined2.inc.php
+
+============================================================================================================
+
+7. From the latest download set, copy the following to your 'templates' folder. * denotes ALL files.
+
+   templates/greybox/*
+   templates/html/custom-fields/*
+   templates/html/attachments-links.htm
+   templates/html/bbcode-link.htm
+   templates/html/faq-article-link.htm
+   templates/html/faq-cat-link.htm
+   templates/html/faq-search-cat.htm
+   templates/html/no-replies.htm
+   templates/html/portal-open-dispute-link.htm
+   templates/html/portal-open-ticket-link.htm
+   templates/html/recaptcha.htm
+   templates/html/ticket-custom-field-data.htm
+   templates/html/ticket-custom-field-wrapper.htm
+   templates/html/users-in-dispute.htm
+   templates/images/*
+   
+   If you made changes to any images, re-copy your backup 'images' folder to overwrite any new files
+   with your backup files. ie, logo.gif
+
+============================================================================================================
+
+8. Update the following files from the latest download set:
+
+   templates/html/attachments.htm
+   templates/html/portal-tickets.htm
+   templates/html/ticket-attachment.htm
+   templates/html/ticket-reply.htm
+   templates/html/voting-links.htm
+
+============================================================================================================
+
+9. Update/add the following files from the latest download set:
+
+   templates/js/drag.js
+   templates/js/jquery.js
+   templates/js/js_code.js
+   templates/js/scrolltotop.js
+
+============================================================================================================
+
+10. From the latest download set, copy the following to your 'templates/language/english/' folder:
+
+   templates/language/english/admin-email/dispute-notification.txt
+   templates/language/english/admin-email/dispute-reply-and-merged.txt
+   templates/language/english/admin-email/dispute-reply.txt
+   templates/language/english/admin-email/dispute-user-current.txt
+   templates/language/english/admin-email/dispute-user-new.txt
+   templates/language/english/admin-email/index.html
+   templates/language/english/admin-email/new-user.txt
+   templates/language/english/admin-email/ticket-edit-notification.txt
+   templates/language/english/email/auto-responder-imap.txt
+   templates/language/english/email/backup.txt
+   templates/language/english/email/change-email.txt
+   templates/language/english/email/dispute-notification.txt
+   templates/language/english/email/dispute-reply-notification.txt
+   templates/language/english/email/email-digest.txt
+   templates/language/english/email/first-auto-responder-imap.txt
+   templates/language/english/email/new-ticket-notification-imap.txt
+   templates/language/english/lang2.php
+
+============================================================================================================
+
+11. From the latest download set, add the following to your 'templates' folder:
+
+    templates/bb-code-help.tpl.php
+    templates/message.tpl.php
+    templates/portal-disputes.tpl.php
+    templates/portal-search.tpl.php
+    templates/portal-tickets.tpl.php
+    templates/portal-view-dispute.tpl.php
+    templates/portal-view-ticket.tpl.php
+    templates/ticket-preview.tpl.php
+    
+    The following should also be replaced. These may require template updates as v2.1 saw significant
+    changes to some of the files. Its not worth noting the actual changes as some of the files are quite
+    different and its easier to re-edit. Refer to your backup file for previous edits.
+    
+    templates/create-ticket.tpl.php
+    templates/faq.tpl.php (previously 'knowledge-base.tpl.php')
+    templates/footer.tpl.php
+    templates/header.tpl.php
+    templates/main-display.tpl.php
+    templates/portal-main.tpl.php (previously 'portal.tpl.php')
+
+============================================================================================================
+
+12. The stylesheet again sees significant changes from v2.0. Its not worth listing all the changes here.
+
+    I would recommend you overwrite the 'stylesheet.css' file and re-edit to suit your layout requirements.
+
+============================================================================================================
+
+13. Refer to the next change to continue if applicable.
+
+============================================================================================================

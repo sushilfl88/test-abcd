@@ -1,0 +1,383 @@
+.bold {
+  font-weight:bold;
+}
+.whitetext {
+  color:#fff;
+  opacity:none;
+}
+.nothing_to_see {
+  text-align:center;
+  font-size:12px;
+  padding:10px;
+  font-style:italic;
+}
+.eMsg {
+  font-size:12px;
+  color:red;
+  padding-left:20px;
+}
+.errColor {
+  color:red;
+}
+.uppercase {
+  text-transform:uppercase;
+}
+
+/* Nav Menu */
+a.mswborder {
+  border-bottom:1px dashed #c8c8cb !important;
+}
+
+/* FAQ */
+.faqQuestion {
+  margin-top:20px;
+  border-bottom:1px dashed #ddd;
+  padding-bottom:20px;
+  color: rgb(78, 92, 119);
+  font-size:16px;
+  line-height:22px;
+}
+.faqAnswer {
+  border-bottom:1px dashed #ddd;
+  padding-bottom:20px;
+}
+.faqAttachments {
+  margin-bottom:10px;
+  border-bottom:1px dashed #ddd;
+}
+.faqAttachments .info {
+  font-size:12px;
+}
+.printFriendly {
+  margin-top:20px;
+}
+.votingSystem {
+  padding-top:10px;
+  text-align:right;
+  font-size:12px;
+  font-style:italic;
+}
+.votingSystem a {
+  margin-left:5px;
+}
+.pagination {
+  padding-top:20px;
+  border-top:1px dashed #ddd;
+}
+
+/* TD Info Bar */
+.tdCellInfo {
+  display:block;
+  font-size:11px;
+  font-style:italic
+}
+
+.tdCellInfo .highlight {
+  color:#66748f;
+}
+
+.highlightPass {
+  color:#66748f;
+}
+
+/* Textarea sizing */
+.well textarea {
+  width: 60%;
+}
+textarea[name="comments"] {
+  width: 98%;
+  height:320px;
+}
+
+/* Custom Fields */
+.customFieldsReply {
+  border-top: 1px dashed #ddd;
+  margin-top:10px;
+  padding-top:10px;
+}
+.customFieldsReply .head {
+  font-size:13px;
+  color:#4e5c77;
+}
+.customFieldsTicket {
+  border-top: 1px dashed #ddd;
+  margin-top:10px;
+  padding-top:10px;
+}
+.customFieldsTicket .head {
+  font-size:13px;
+  color:#4e5c77;
+}
+.customFields .textHead {
+  border: 1px dashed #ddd;
+  background:#f6f6f6;
+  padding:10px;
+  margin-bottom:10px;
+}
+.customFields .dataArea {
+  padding:5px;
+  padding-left:0;
+}
+.customFields .input-xlarge {
+  width:50%;
+}
+.customFields textarea {
+  width: 50%;
+}
+
+/* Custom Fields (create) */
+.customFieldsCreate {
+  display:none;
+  border-top: 1px dashed #ddd;
+  border-bottom: 1px dashed #ddd;
+  margin:10px 0 10px 0;
+  padding:10px 0 10px 0;
+}
+.customFieldsCreate .textHead {
+}
+.customFieldsCreate .dataArea {
+  padding:5px;
+  padding-left:0;
+}
+.customFieldsCreate .input-xlarge {
+  width:50%;
+}
+.customFieldsCreate textarea {
+  width: 50%;
+}
+
+/* Tickets */
+.ticketInfoBox {
+  margin-top:20px;
+  border-top:1px dashed #ddd;
+  padding-top:10px;
+}
+.ticketInfoBox .info {
+  font-size:11px;
+  font-style:italic;
+  text-align:right;
+}
+.ticketStatusBar {
+  display:block;
+  margin-top:10px;
+  font-size:11px;
+  font-style:italic;
+  padding-right:50px;
+  color:#66748f;
+}
+.attachments {
+  text-align:left;
+}
+.attachments .file {
+  display:block;
+  margin-bottom:5px;
+}
+.attachlinks {
+  margin:10px 0 10px 0;
+}
+.attachRestrictions {
+  margin-top:50px;
+  font-size:11px;
+  border-top:1px dashed #ddd;
+  padding:10px 0 0 0;
+  background:url(../images/info.png) no-repeat 95% 15%;
+}
+.attachRestrictions .head {
+  display:block;
+}
+.attachRestrictions .info {
+  display:block;
+  color:#41495a;
+  text-transform:uppercase;
+}
+.attachRestrictions .ignore {
+  display:block;
+  margin-top:10px;
+  font-style:italic;
+  color:red;
+}
+.ticketMessage {
+  text-align:center;
+  font-size:12px;
+  font-style:italic;
+  background:#fcf8e3;
+  margin:0;
+  padding:0;
+  border-top:1px dashed #ddd;
+  border-bottom:1px dashed #ddd;
+}
+.ticketMessage p {
+  padding:10px;
+  margin:0;
+}
+.userSignature {
+  margin-top:20px;
+  border-top:1px dashed #ddd;
+  padding:10px 0 0 0;
+  font-size:11px;
+  font-style:italic;
+}
+.replyArea {
+  border-top:1px dashed #ddd;
+  padding-top:20px;
+}
+.eFormErr {
+  display:block;
+  margin:0 0 10px 0;
+  background:#ff9999;
+  color:#fff;
+  font-size:12px;
+  padding:5px;
+  width:40%;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+#cusErrMsg_comments {
+  width:60%;
+}
+.span4 .eFormErr {
+  width:90%;
+}
+.ticketconfirmmessage {
+  background: url(../images/ok.png) no-repeat 98% 30%;
+}
+.ticketDate {
+  display:block;
+  margin-top:10px;
+  font-size:12px;
+  color:#66748f;
+}
+.ticketPriority {
+  display:block;
+  margin-top:10px;
+  font-size:12px;
+}
+.dashviewlink {
+  text-transform: uppercase;
+  font-size:11px;
+}
+
+/* Ticket Area Colouring */
+.mainticket {
+}
+.mainticket .block-heading {
+}
+.mainticket .block-heading .label {
+  background:#f3f3f3;
+  color:#555;
+  text-shadow:none;
+  box-shadow:none;
+}
+.reptypeadmin {
+}
+.reptypeadmin .block-heading {
+}
+.reptypeadmin .block-heading .label {
+  background:#f3f3f3;
+  color:#555;
+  text-shadow:none;
+  box-shadow:none;
+}
+.reptypevisitor {
+}
+.reptypevisitor .block-heading {
+}
+.reptypevisitor .block-heading .label {
+  background:#f3f3f3;
+  color:#555;
+  text-shadow:none;
+  box-shadow:none;
+}
+
+/* Preview Areas */
+#previewArea {
+  display:none;
+}
+.previewArea {
+  overflow:auto;
+  margin-bottom:10px;
+  width:97.3%;
+  padding:10px;
+  border:1px solid #ddd;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background:url(../images/preview.png) no-repeat 95% 10%;
+}
+.prevTickets {
+  height:327px;
+}
+.prevSR {
+  height:210px;
+}
+.prevFAQ {
+  height:190px;
+}
+
+/* Block UI */
+h1.blockLoader {
+  padding:25px 10px 10px 10px;
+  background:url(../images/block-loader.gif) no-repeat 50% 60%;
+}
+.blockMsg {
+  padding: 0;
+  margin: 0;
+  width: 25%;
+  top: 40%;
+  left: 35%;
+  color: #555;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: #f6f6f6;
+  cursor:wait;
+}
+
+/* Drop Downs */
+.dropdown-menu {
+  max-height:200px;
+  overflow:auto;
+}
+.dropdown-menu a {
+  font-size:12px;
+}
+.topbar-dropdowns a {
+  font-size:12px;
+}
+.page-dropdowns a {
+  font-size:12px;
+}
+.page-dropdowns span {
+  font-size:12px;
+  cursor:pointer;
+}
+.page-dropdowns span:hover {
+  color:#464f60;
+}
+
+/*Buttons*/
+.search-bar-button {
+  margin-left:7px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* Header adjustments */
+.header .page-title {
+  margin:0;
+}
+
+/* Overlay spinner */
+.overlaySpinner {
+  position:absolute;
+  z-index: 9999;
+  top:0;
+  left:0;
+  background: #eee url(../images/action-spinner.gif) center 10% no-repeat !important;
+  height:100% !important;
+  width:100% !important;
+  opacity: .5;
+}

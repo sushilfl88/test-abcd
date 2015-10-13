@@ -1,0 +1,20 @@
+[Error Code: 1] Class 'tickets' not found
+[Date/Time: 11 October 2015 @ 12:36PM]
+[Fatal error on line 43 in file C:\xampp\htdocs\maian_support\helpdesk\admin\control\system\tickets\ticket-submit.php]
+- - - - - - - - - - - - - - - - - - -
+[Error Code: 1] Class 'departments' not found
+[Date/Time: 12 October 2015 @ 15:34PM]
+[Fatal error on line 29 in file C:\xampp\htdocs\maian_support\helpdesk\admin\control\system\role\role.php]
+- - - - - - - - - - - - - - - - - - -
+[Error Code: 1] Class 'departments' not found
+[Date/Time: 12 October 2015 @ 15:34PM]
+[Fatal error on line 29 in file C:\xampp\htdocs\maian_support\helpdesk\admin\control\system\role\role.php]
+- - - - - - - - - - - - - - - - - - -
+[Error Code: 1] Class 'departments' not found
+[Date/Time: 12 October 2015 @ 15:40PM]
+[Fatal error on line 29 in file C:\xampp\htdocs\maian_support\helpdesk\admin\control\system\role\role.php]
+- - - - - - - - - - - - - - - - - - -
+[Error Code: 1] Class 'departments' not found
+[Date/Time: 12 October 2015 @ 15:40PM]
+[Fatal error on line 29 in file C:\xampp\htdocs\maian_support\helpdesk\admin\control\system\role\role.php]
+- - - - - - - - - - - - - - - - - - -

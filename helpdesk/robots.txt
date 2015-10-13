@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /cgi-bin/
+Disallow: /admin/
+Disallow: /backups/
+Disallow: /content/
+Disallow: /control/
+Disallow: /docs/
+Disallow: /install/
+Disallow: /logs/

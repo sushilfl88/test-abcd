@@ -1,0 +1,21 @@
+        <div id="recaptcha_wrapper">
+		 <label>{text}</label>
+         <div class="recaptcha">
+          <script type="text/javascript">
+          //<![CDATA[
+          var RecaptchaOptions = {
+           theme : '{theme}',
+           tabindex: '50',
+           lang: '{lang}'
+          };
+		  jQuery(document).ready(function() {
+            jQuery('#recaptcha_response_field').attr('onkeyup','msErrClear(\'recaptcha_response_field\')');
+		  });
+		  //]]>
+          </script>
+          <script type="text/javascript" src="{api_url}/challenge?k={public_key}"></script>
+          <noscript>
+           <p><input type="hidden" name="recaptcha_response_field_fail" value="yes"></p>
+          </noscript>
+         </div>
+		</div>

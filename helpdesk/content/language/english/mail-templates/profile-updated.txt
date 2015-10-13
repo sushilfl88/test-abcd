@@ -1,0 +1,16 @@
+Profile Update Confirmation
+
+<-{separater}->
+
+Hello {NAME},
+
+You have successfully updated your profile at {WEBSITE_NAME}.
+
+If you did not action this update, please contact us asap.
+
+Kind regards,
+
+<-{separater}->
+
+{WEBSITE_NAME} Support Team
+{WEBSITE_URL}
